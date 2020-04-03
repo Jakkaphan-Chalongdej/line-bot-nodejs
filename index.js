@@ -13,7 +13,7 @@ const app = express();
 app.post('/webhook', line.middleware(config), (req, res) => {
   // req.body.events should be an array of events
   if (!Array.isArray(req.body.events)) {
-    return res.status(500).end();
+    return res.status(200).end();
   }
   // handle events separately
   Promise.all(req.body.events.map(event => {
