@@ -28,7 +28,7 @@ app.post('/webhook', line.middleware(config), (req, res) => {
     .then(() => res.end())
     .catch((err) => {
       console.error(err);
-      res.status(500).end();
+      res.status(200).end();
     });
 });
 
